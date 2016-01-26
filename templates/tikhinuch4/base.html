@@ -1,0 +1,128 @@
+{#{% load i18n %}#}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <title>תיק חינוך</title>
+    <meta charset="utf-8">
+{#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+      <!-- Google Font: Open Sans -->
+  <link rel="stylesheet" href="{% static "css/opensans.css" %}">
+  <link rel="stylesheet" href="{% static "css/Oswald.css" %}">
+<!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+     <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap-rtl.min.css" %}">
+
+        <link rel="stylesheet" href="{% static "css/animate.min.css" %}">
+
+{#    <link rel="stylesheet" href="{% static "css/vegas.min.css" %}">#}
+       <link rel="stylesheet" href="{% static "css/custom.css" %}">
+  <!-- Favicon -->
+  <link rel="short/cut icon" href="{% static "img/bag-512.png" %}">
+
+{#      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->#}
+{#  <!--[if lt IE 9]>#}
+  <script src="{% static "js/html5shiv.min.js" %}"></script>
+  <script src="{% static "js/respond.min.js" %}"></script>
+
+
+{#      <![endif]-->#}
+</head>
+
+<body class=" ">
+
+<div id="wrapper">
+
+  <header class="navbar" role="banner">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand navbar-brand-img">
+          <img  src="/static/img/logo-he.png" alt="Tik Hinuch" height="30px" style="margin-top: 10px">
+        </a>
+
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">ניווט</span>
+          <i class="fa fa-bars"></i>
+        </button>
+      </div> <!-- /.navbar-header -->
+
+
+      <nav class="collapse navbar-collapse" role="navigation">
+
+        <ul class="nav navbar-nav navbar-right mainnav-menu">
+                        <li>
+            <a href="/en/">
+            English
+            </a>
+
+          </li>
+                        <li>
+            <a href="/about">
+            אודות
+            </a>
+          </li>
+
+          <li >
+
+            <a href="/blog">
+            בלוג
+            </a>
+
+          </li>
+        </ul>
+
+      </nav>
+
+    </div> <!-- /.container -->
+
+  </header>
+{% block content %}
+
+{% endblock content %}
+</div>
+
+
+<footer class="copyright">
+  <div class="container">
+    <p class="pull-right">
+<span>  תיק חינוך 2015
+        </span>
+&nbsp;&nbsp;
+
+         <a href="http://infosoc.haifa.ac.il/index.php/he/">
+          <img  src="/static/img/IC_logo.png" alt="המרכז לחקר האינטרנט" height="40px">
+        </a>&nbsp;&nbsp;
+{#        <a href="http://links.org.il/">#}
+{#          <img  src="/static/img/links_logo.png" alt="לינקס" height="40px">#}
+{#        </a>#}
+<a href="http://www.trump.org.il">
+          <img  src="/static/img/Trump-logo.png" alt="קרן טראמפ" height="50px">
+        </a>&nbsp;&nbsp;
+
+    </p>
+  </div>
+</footer>
+<!-- Core JS -->
+<script href="{% static "js/jquery.js" %}"></script>
+<script href="{% static "js/bootstrap.min.js" %}"></script>
+
+<script href="{% static "js/jquery.slimscroll.min.js" %}"></script>
+
+
+<!-- App JS -->
+<script href="{% static "js/custom.js" %}"></script>
+
+</body>
+
+</html>
