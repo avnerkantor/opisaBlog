@@ -6,6 +6,8 @@ from django.utils import timezone
 
 from .models import Choice, Question
 
+# https://github.com/AquaSolid/DjangoCleanBlog/tree/master/polls/templates/polls
+
 
 # def index(request):
 #     latest_question_list = Question.objects.order_by('-pub_date')[:5]

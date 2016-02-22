@@ -5,12 +5,13 @@
 
         <div class="row">
 
-            <div class="col-lg-8">
+            <div class="col-md-8">
 
                 <h1>{{ post.title }}</h1>
 
                 <p class="lead">
-                    מאת <a href="javascript:;">{{ post.author }}</a>
+{# <a href="javascript:;"></a>                   #}
+                    מאת {{ post.author }}
                 </p>
                 <hr>
                 {% if post.published_date %}
@@ -18,66 +19,70 @@
                 {% endif %}
                 <hr>
                 <p>{{ post.text|safe }}</p>
-                {#            {% load disqus_tags %}#}
-                {#              {% disqus_show_comments %}#}
+                            {% load disqus_tags %}
+                              {% disqus_show_comments %}
             </div>
             <div class="col-md-4">
                 <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
+    <div class="well">
+                    <h4>חיפוש בבלוג</h4>
 
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                    </div>
+                    <form method="GET" action="">
+                        <div class="input-group">
+                            <input id="home_search" type="text" class="form-control" name='q' placeholder="חיפוש רשומות"
+                                   value="{{ request.get.q }}">
+
+
+                                <input type='submit' value='חפש'>
+
+                        </div>
+                    </form>
                     <!-- /.input-group -->
                 </div>
 
                 <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
+{#               <div class="well">#}
+{#                    <h4>קטגוריות</h4>#}
+{##}
+{#                    <div class="row">#}
+{#                        <div class="col-lg-6">#}
+{#                            <ul class="list-unstyled">#}
+{#                                <li><a href="#">מתמטיקה</a>#}
+{#                                </li>#}
+{#                                <li><a href="#">מדעים</a>#}
+{#                                </li>#}
+{#                                <li><a href="#">קריאה</a>#}
+{#                                </li>#}
+{#                                <li><a href="#">פיז"ה</a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <!-- /.col-lg-6 -->#}
+{#                        <div class="col-lg-6">#}
+{#                            <ul class="list-unstyled">#}
+{#                                <li><a href="#">חינוך</a>#}
+{#                                </li>#}
+{#                                <li><a href="#">ויזואליזציה</a>#}
+{#                                </li>#}
+{#                                <li><a href="#">אוניברסיטת חיפה</a>#}
+{#                                </li>#}
+{#                                <li><a href="#">סטטיסטיקה</a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <!-- /.col-lg-6 -->#}
+{#                    </div>#}
+{#                    <!-- /.row -->#}
+{#                </div>#}
 
                 <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci
-                        accusamus
-                        laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+{#                <div class="well">#}
+{#                    <h4>Side Widget Well</h4>#}
+{##}
+{#                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci#}
+{#                        accusamus#}
+{#                        laudantium odit aliquam repellat tempore quos aspernatur vero.</p>#}
+{#                </div>#}
 
             </div>
         </div>
