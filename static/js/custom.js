@@ -1,5 +1,6 @@
 $(function(){
     $("#Analyze").hide();
+     $('#Search').hide();
   $('#PisaLink').click(function(){
      $('#Pisa').show();
      $('#Analyze').hide();

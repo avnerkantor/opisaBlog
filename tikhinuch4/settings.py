@@ -97,7 +97,6 @@ WSGI_APPLICATION = 'tikhinuch4.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.psycopg2',
-        # 'NAME': 'db.sqlite3',
     }
 }
 
@@ -162,9 +161,6 @@ DISQUS_WEBSITE_SHORTNAME = 'tikhinuch'
 
 
 SITE_ID = 1
-
-# CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
 
 
 CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'

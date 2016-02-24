@@ -9,16 +9,19 @@ from .models import Post
 # from django.template import RequestContext
 # from django.http import HttpResponse, HttpResponseRedirect, Http404
 # from polls.models import Question, Choice
-def index(request):
+def view_home(request):
     posts = Post.objects.order_by('-published_date')[0:5]
     return render(request, '../templates/tikhinuch4/index.html', {'post': posts})
 
+def view_home_en(request):
+    # posts = Post.objects.order_by('-published_date')[0:5]
+    return render(request, '../templates/tikhinuch4/index-en.html', {})
 
-def about(request):
+def view_about(request):
     return render(request, 'blog/about.html', {})
 
 
-def post_list(request):
+def view_post_list(request):
     today = timezone.now().date()
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     # categories = Category.objects.all()
@@ -53,6 +56,6 @@ def post_list(request):
     return render(request, 'blog/post_list.html', context)
 
 
-def post_detail(request, slug):
+def view_post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     return render(request, 'blog/post_detail.html', {'post': post})

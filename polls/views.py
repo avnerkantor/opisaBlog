@@ -9,6 +9,13 @@ from .models import Choice, Question
 # https://github.com/AquaSolid/DjangoCleanBlog/tree/master/polls/templates/polls
 
 
+
+
+
+#https://github.com/AquaSolid/DjangoCleanBlog/blob/master/blog/views.py
+
+
+
 # def index(request):
 #     latest_question_list = Question.objects.order_by('-pub_date')[:5]
 #     context = {'latest_question_list': latest_question_list}

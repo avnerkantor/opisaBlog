@@ -1,4 +1,3 @@
-{#{% load i18n %}#}
 {% load staticfiles %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -20,7 +19,6 @@
     <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
      <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
-    <link rel="stylesheet" href="{% static "css/bootstrap-rtl.min.css" %}">
 
         <link rel="stylesheet" href="{% static "css/animate.min.css" %}">
 
@@ -45,12 +43,12 @@
     <div class="container">
 
       <div class="navbar-header">
-        <a href="/" class="navbar-brand navbar-brand-img">
-          <img  src="/static/img/logo-he.png" alt="Tik Hinuch" height="30px" style="margin-top: 10px">
+        <a href="/en" class="navbar-brand navbar-brand-img">
+          <img  src="/static/img/logo2.png" alt="Tik Hinuch" height="30px" style="margin-top: 10px">
         </a>
 
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">ניווט</span>
+          <span class="sr-only">Navigate</span>
           <i class="fa fa-bars"></i>
         </button>
       </div> <!-- /.navbar-header -->
@@ -58,23 +56,22 @@
 
       <nav class="collapse navbar-collapse" role="navigation">
 
-        <ul class="nav navbar-nav navbar-right mainnav-menu">
-                        <li>
-            <a href="/en/">
-            English
-            </a>
+        <ul class="nav navbar-nav navbar-left mainnav-menu">
 
-          </li>
-                        <li>
-            <a href="/about">
-            אודות
-            </a>
-          </li>
 
           <li >
 
-            <a href="/blog">
-            בלוג
+            <a href="/en/blog">
+            Blog
+            </a>
+
+          </li>   <li>
+            <a href="/en/about">
+            About
+            </a>
+          </li>   <li>
+            <a href="/../">
+            עברית
             </a>
 
           </li>
@@ -91,20 +88,17 @@
 </div>
 
 
-<footer class="copyright">
+<footer class="copyright" dir="ltr">
   <div class="container">
-    <p class="pull-right">
-{#<span><b>  תיק חינוך 2016</b>#}
-{#        </span>#}
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://www.trump.org.il">
-          <img  src="/static/img/Trump-logo.png" alt="קרן טראמפ" height="70px" >
+
+<a href="http://www.trump.org.il/en">
+          <img  src="/static/img/Trump-logo.png" alt="Trump Foundation" height="70px" >
         </a>&nbsp;&nbsp;&nbsp;&nbsp;
-         <a href="http://infosoc.haifa.ac.il/index.php/he/">
-          <img  src="/static/img/IC_logo.png" alt="המרכז לחקר האינטרנט" height="50px">
+         <a href="http://infosoc.haifa.ac.il/index.php/en/">
+          <img  src="/static/img/IC_logo.png" alt="Internet Research Center" height="50px">
         </a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="http://links.org.il/">
-          <img  src="/static/img/links_logo1.png" alt="לינקס" height="70px">
+        <a href="http://links.org.il/en">
+          <img  src="/static/img/links_logo1.png" alt="LINKS" height="70px">
         </a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="http://www.emind.co/">
           <img  src="/static/img/emind-logo.png" alt="emind" height="50px">
