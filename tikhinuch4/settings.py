@@ -11,18 +11,17 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import dj_database_url
+
 # SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&s^4!!#bz5!=q*i9w3xa!123cn^8@!w^nifb9em228wvb&xwf4'
-
-
 
 # Application definition
 
@@ -36,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'disqus',
+    'disqus',
     'ckeditor',
     # 'blog',
     # 'allauth',
@@ -55,7 +54,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'tikhinuch4.urls'
@@ -86,7 +85,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tikhinuch4.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
@@ -95,7 +93,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -114,7 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -136,11 +132,13 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'staticfiles'),
 )
 
-
 #
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+
+# Update database configuration with $DATABASE_URL.
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+# DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -154,15 +152,13 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
 DISQUS_WEBSITE_SHORTNAME = 'tikhinuch'
 
-
 SITE_ID = 1
-
 
 CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-CKEDITOR_RESTRICT_BY_USER=True
+CKEDITOR_RESTRICT_BY_USER = True
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -228,7 +224,6 @@ CKEDITOR_CONFIGS = {
             ]),
     }
 }
-
 
 try:
     from .local_settings import *
