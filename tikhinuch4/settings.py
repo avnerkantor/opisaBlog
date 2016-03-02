@@ -131,13 +131,12 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
-
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+#
+gi
 #
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
@@ -149,9 +148,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
 DISQUS_WEBSITE_SHORTNAME = 'tikhinuch'
