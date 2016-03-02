@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'tikhinuch4.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
     }
 }
 

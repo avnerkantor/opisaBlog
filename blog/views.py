@@ -2,7 +2,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.utils import timezone
 from django.db.models import Q
-from .models import Post
+from .models import Post, Category, Author, Tag
 
 
 # from django.conf import settings
@@ -23,9 +23,10 @@ def view_about(request):
 
 def view_post_list(request):
     today = timezone.now().date()
+    #, status='p', category=cat.pk
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    # categories = Category.objects.all()
-
+    category = Category.objects.all()
+    #
     query = request.GET.get("q")
     if query:
         posts = posts.filter(
