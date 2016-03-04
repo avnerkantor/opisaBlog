@@ -11,8 +11,8 @@ from  django.db.models import permalink
 
 class Author(models.Model):
     name = models.CharField('שם', max_length=50)
-    email = models.EmailField('דואל', unique=True)
-    bio = models.TextField('ביוגרפיה')
+    email = models.EmailField('דואל', unique=True, null=True)
+    bio = models.TextField('ביוגרפיה', null=True)
 
     def __str__(self):
         return self.name
@@ -52,7 +52,7 @@ class Post(models.Model):
         default=timezone.now)
     published_date = models.DateTimeField('תאריך פרסום',
                                           default=timezone.now)
-    category = models.ForeignKey(Category, related_name='post_category', null=True)
+    category = models.ForeignKey(Category, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
 
 def __str__(self):

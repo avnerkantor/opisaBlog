@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             {#                            <ul class="list-unstyled">#}
-                            {% for post in posts %}
+                            {% for post in recentposts %}
                                 {#                                    <li><i class="fa-li fa fa-chevron-left"></i> #}
                                 <span>
                                     <a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></span>

@@ -10,8 +10,8 @@ from .models import Post, Category, Author, Tag
 # from django.http import HttpResponse, HttpResponseRedirect, Http404
 # from polls.models import Question, Choice
 def view_home(request):
-    posts = Post.objects.order_by('-published_date')[0:5]
-    return render(request, '../templates/tikhinuch4/index.html', {'post': posts})
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, '../templates/tikhinuch4/index.html', {'recentposts': recentposts})
 
 def view_home_en(request):
     # posts = Post.objects.order_by('-published_date')[0:5]
@@ -61,3 +61,4 @@ def view_post_list(request):
 def view_post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     return render(request, 'blog/post_detail.html', {'post': post})
+
