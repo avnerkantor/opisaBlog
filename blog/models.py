@@ -42,16 +42,6 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    """
-	Model untuk post
-	"""  # choices untuk status post
-    STATUS_CHOICES = (
-        ('d', 'Draft'),
-        ('p', 'Publish'),
-        ('a', 'Archieved'),
-    )
-
-
     # authors = models.ManyToManyField(Author)
     # author = models.ForeignKey('auth.User', blank=True, null=True, default=1)
     author = models.ForeignKey(Author, blank=True, null=True)
@@ -64,7 +54,6 @@ class Post(models.Model):
                                           default=timezone.now)
     category = models.ForeignKey(Category, related_name='post_category', null=True)
     tags = models.ManyToManyField(Tag)
-    status = models.CharField(max_length=1, default='d', choices=STATUS_CHOICES)
 
 def __str__(self):
     return self.title

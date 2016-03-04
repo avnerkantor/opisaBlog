@@ -25,9 +25,8 @@ def view_scholarships(request):
 
 def view_post_list(request):
     today = timezone.now().date()
-    #, status='p', category=cat.pk
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    category = Category.objects.all()
+    # category = Category.objects.all()
     #
     query = request.GET.get("q")
     if query:
