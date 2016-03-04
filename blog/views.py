@@ -20,6 +20,8 @@ def view_home_en(request):
 def view_about(request):
     return render(request, 'blog/about.html', {})
 
+def view_scholarships(request):
+    return render(request, 'blog/scholarships.html',{})
 
 def view_post_list(request):
     today = timezone.now().date()
