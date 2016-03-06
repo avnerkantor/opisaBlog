@@ -1,19 +1,13 @@
 $(function(){
-    $("#Analyze").hide();
-     $('#Search').hide();
   $('#PisaLink').click(function(){
-     $('#Pisa').show();
-     $('#Analyze').hide();
-     $('#Search').hide();
+//document.location = "http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b";
   });
   $('#AnalyzeLink').click(function(){
-     $('#Pisa').hide();
-      $('#Search').hide();
-     $('#Analyze').show();
+//document.location = "http://130.211.111.52/shiny/tikhinuch/?tab=Analyze";
   });
     $('#SearchLink').click(function(){
-     $('#Pisa').hide();
-      $('#Search').show();
-     $('#Analyze').hide();
+    //document.location = "http://130.211.111.52/shiny/tikhinuch/?tab=Search";
+
   });
 });
+
