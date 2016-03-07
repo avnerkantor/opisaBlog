@@ -12,19 +12,36 @@
                 </h1>
 
                 <!-- First Blog Post לגלות הישגים, לבחון מדדים -->
-                <h2>
-                    <a id="PisaLink" href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" target="pisa_iframe">האם ההישגים בעליה</a> /
-                    <a id="AnalyzeLink" href="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze" target="pisa_iframe">מה מראים המדדים</a> /
-                    <a id="SearchLink" href="http://130.211.111.52/shiny/tikhinuch/?tab=Search" target="pisa_iframe">משתנים</a>
-{#                      <a id="PisaLink" href="?tab=Pisa1b" target="pisa_iframe">האם ההישגים בעליה</a> /#}
-{#                    <a id="AnalyzeLink" href="Analyze" target="pisa_iframe">מה מראים המדדים</a> /#}
-{#                    <a id="SearchLink" href="?tab=Search" target="pisa_iframe">משתנים</a>#}
-
+                {#                <h2>#}
+                {#                    <a id="PisaLink" href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" target="pisa_iframe">האם ההישגים בעליה</a>#}
+                {#                    <a id="AnalyzeLink" href="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze" target="pisa_iframe" style="color: coral">מה מראים המדדים</a>#}
+                {#                    #}
+                {#                </h2>#}
+                {#                <iframe style="width: 100%; height: 100vh; frameborder:0; scrolling:no"#}
+                {#                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" name="pisa_iframe"></iframe>#}
+                {#                 <a id="SearchLink" href="http://130.211.111.52/shiny/tikhinuch/?tab=Search" target="pisa_iframe">מילון משתנים</a>#}
+                <h2><a id="PisaLink" href="javascript:void(0);">האם ההישגים בעליה</a>
+                    <a id="AnalyzeLink" href="javascript:void(0);" style="color: coral">מה מראים המדדים</a>
+                    {#                   #}
                 </h2>
-
-                <iframe style="width: 100%; height: 100vh; frameborder:0; scrolling:no"
-                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" name="pisa_iframe"></iframe>
-
+                {#                <hr>#}
+                <div id="Pisa">
+                    {#                    Pisa#}
+                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"
+                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b"></iframe>
+                </div>
+                <div id="Analyze">
+                    {#                    Analyze#}
+                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"
+                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze"></iframe>
+                </div>
+                <div id="Search">
+                    {#                    Search#}
+                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"
+                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Search"></iframe>
+                </div>
+                <h3 dir="ltr">
+                 <a id="SearchLink" href="javascript:void(0);" style="color: black; " >מילון המשתנים</a></h3>
             </div>
             <div class="col-md-3">
                 <div class="well">
@@ -60,12 +77,12 @@
 
                 <!-- Side Widget Well -->
                 <!-- Blog Search Well -->
-                                <div class="well">
-                                    <h4><a href="/scholarships">קול קורא</a></h4>
+                <div class="well">
+                    <h4><a href="/scholarships">קול קורא</a></h4>
 
-                                    בקרוב.
-                                    <!-- /.input-group -->
-                                </div>
+                    בקרוב.
+                    <!-- /.input-group -->
+                </div>
 
 
             </div>
