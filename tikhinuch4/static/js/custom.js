@@ -28,3 +28,11 @@ $(function(){
      $('#Analyze').hide();
   });
 });
+
+//$(function () {
+//    $('#aa').click(function () {
+//        alert("df");
+//        $('#myiframe').contents().find('#7448-3').click();
+//    });
+//});
+
