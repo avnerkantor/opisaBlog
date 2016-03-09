@@ -10,6 +10,7 @@ from  django.db.models import permalink
 # from managers import PostManger
 
 
+
 class Author(models.Model):
     name = models.CharField('שם', max_length=50)
     email = models.EmailField('דואל', unique=True, null=True)
@@ -44,11 +45,11 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    # STATUS_CHOICES=(
-    #     ('d', 'טיוטה'),
-    #     ('a', 'ארכיון'),
-    #     ('p','פרסם')
-    # )
+    STATUS_CHOICES=(
+        ('d', 'טיוטה'),
+        ('a', 'ארכיון'),
+        ('p','פרסם')
+    )
 
     # authors = models.ManyToManyField(Author)
     # author = models.ForeignKey('auth.User', blank=True, null=True, default=1)
@@ -60,12 +61,12 @@ class Post(models.Model):
         default=timezone.now)
     published_date = models.DateTimeField('תאריך פרסום',
                                           default=timezone.now)
-    # modified = models.DateTimeField('modified', auto_now=True)
+    modified = models.DateTimeField('modified', auto_now=True, null=True)
     category = models.ForeignKey(Category, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
-    # status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
     # objects=PostManger()
-
+    #
     def __str__(self):
         return self.title
 
@@ -74,6 +75,7 @@ class Post(models.Model):
         verbose_name = 'רשומה'
         verbose_name_plural = 'רשומות'
 
+    # @permalink
     # def get_absolute_url(self):
     #     return "/%s/%s/%s/" % (self.pub_date.year, self.pub_date.month, self.slug)
 
