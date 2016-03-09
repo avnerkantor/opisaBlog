@@ -34,7 +34,7 @@
                     <h4><a href="/blog">רשומות אחרונות</a></h4>
 
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div>
                             {% for post in recentposts %}
                                 <span>
                                     <a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></span>
