@@ -32,6 +32,8 @@
                 {% endfor %}
 
 <div class="col-md-9">
+<br>
+<h4>
                 <span class="previous">
                     {% if posts.has_previous %}
                             <a href="?{{ page_request_var }}={{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">עמוד קודם</a>
@@ -45,6 +47,7 @@
                             <a href="?{{ page_request_var }}={{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">לעמוד הבא</a>
                     {% endif %}
                 </span>
+<br></h4>
             </div>
             </div>
             <div class="col-md-3">
