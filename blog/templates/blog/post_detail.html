@@ -15,7 +15,7 @@
                 </p>
                 <hr>
                 {% if post.published_date %}
-                    <p><span class="glyphicon glyphicon-time"></span> {{ post.published_date|date:"j/m/Y" }}</p>
+                    <p><p>פורסם ב-{{ post.published_date }}</p></p>
                 {% endif %}
                 <hr>
                 <p>{{ post.text|safe }}</p>
