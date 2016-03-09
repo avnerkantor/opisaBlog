@@ -2,9 +2,8 @@
 
 {% block content %}
     <div class="container">
-
         <div class="row">
-            <div dir="rtl" style="text-align: right; font-size: large" trbidi="on">
+            <div class="col-md-9" dir="rtl" style="text-align: right; font-size: large">
                 פרויקט תיק חינוך מפותח ב<a href="http://infosoc.haifa.ac.il/index.php/he/">מרכז לחקר האינטרנט
                 באוניברסיטת חיפה</a> בתמיכתה הנדיבה של <a href="http://www.trump.org.il/">קרן טראמפ</a>.<br/>
                 <br/>
@@ -14,12 +13,41 @@
                 מנהל: <a href="http://rafaeli.net/">פרופ' שיזף רפאלי</a><br/>
                 מנהלת מחקר, תכנון ופרויקטים אקדמיים: <a
                     href="http://infosoc.haifa.ac.il/index.php/he/about/contact-us">ד"ר עו"ד עדי ליבסקר</a><br/>
-                מפתח: <a href="http://avnerkantor.com">אבנר קנטור</a></div>
-            <br/>
-            <hr>
-            <a href="https://github.com/avnerkantor/tikhinuch">לקוד המקור של המערכת</a>
+                מפתח: <a href="http://avnerkantor.com">אבנר קנטור</a>
+                <br/>
+                <hr>
+                <a href="https://github.com/avnerkantor/tikhinuch">
+                    קוד מקור
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <div class="well">
+                    <h4><a href="/about">מהו תיק חינוך</a></h4>
+
+                    <p> תיק חינוך היא יוזמה משותפת לקרן טראמפ ולמרכז לחקר האינטרנט באוניברסיטת חיפה שמטרתה להנגיש לציבור
+                        ולחוקרים את תמונת החינוך בישראל כפי שהיא משתקפת בנתוני מבחן פיז"ה הבינלאומי. </p>
+
+                    <p>זוהי מערכת ראשונה מסוגה בעולם אשר מאפשרת ללמוד את הגורמים המשפיעים והמעצבים את החינוך. </p>
+                </div>
+                <div class="well">
+                    <h4><a href="/blog">רשומות אחרונות</a></h4>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            {% for post in recentposts %}
+                                <span>
+                                    <a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></span>
+                                <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /.row -->
+            </div>
         </div>
-        <!-- /.row -->
     </div>
 {% endblock %}
 <!-- Title -->

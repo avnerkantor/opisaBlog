@@ -4,9 +4,34 @@
     <div class="container">
 
         <div class="row">
-<div dir="rtl" style="text-align: right; font-size: large" trbidi="on">
-בבנייה
+<div class="col-md-9" dir="rtl" style="text-align: right; font-size: large" trbidi="on">
+בקרוב
     <!-- /.row -->
+    </div>
+                        <div class="col-md-3">
+                <div class="well">
+                    <h4><a href="/about">מהו תיק חינוך</a></h4>
+
+                    <p> תיק חינוך היא יוזמה משותפת לקרן טראמפ ולמרכז לחקר האינטרנט באוניברסיטת חיפה שמטרתה להנגיש לציבור
+                        ולחוקרים את תמונת החינוך בישראל כפי שהיא משתקפת בנתוני מבחן פיז"ה הבינלאומי. </p>
+
+                    <p>זוהי מערכת ראשונה מסוגה בעולם אשר מאפשרת ללמוד את הגורמים המשפיעים והמעצבים את החינוך. </p>
+                </div>
+
+                <div class="well">
+                    <h4><a href="/blog">רשומות אחרונות</a></h4>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            {% for post in recentposts %}
+                                <span>
+                                    <a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></span>
+                                <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+    </div>
     </div>
 {% endblock %}
 <!-- Title -->

@@ -18,13 +18,15 @@ def view_home_en(request):
     return render(request, '../templates/tikhinuch4/index-en.html', {})
 
 def view_about(request):
-    return render(request, 'blog/about.html', {})
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, 'blog/about.html', {'recentposts': recentposts})
 
 def view_about_en(request):
     return render(request, 'blog/about-en.html', {})
 
 def view_grunts(request):
-    return render(request, 'blog/grunts.html',{})
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, 'blog/grunts.html',{'recentposts': recentposts})
 
 def view_post_list(request):
     today = timezone.now().date()
