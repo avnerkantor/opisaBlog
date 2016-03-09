@@ -66,18 +66,18 @@
                 <ul class="nav navbar-nav navbar-left mainnav-menu">
 
 
-{#                    <li>#}
-{##}
-{#                        <a href="/en/blog">#}
-{#                            Blog#}
-{#                        </a>#}
-{##}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="/en/about">#}
-{#                            About#}
-{#                        </a>#}
-{#                    </li>#}
+                    {#                    <li>#}
+                    {##}
+                    {#                        <a href="/en/blog">#}
+                    {#                            Blog#}
+                    {#                        </a>#}
+                    {##}
+                    {#                    </li>#}
+                    {#                    <li>#}
+                    {#                        <a href="/en/about">#}
+                    {#                            About#}
+                    {#                        </a>#}
+                    {#                    </li>#}
                     <li>
                         <a href="/../">
                             עברית
@@ -91,32 +91,39 @@
         </div> <!-- /.container -->
 
     </header>
-   {% block content %}
+    {% block content %}
 
     {% endblock content %}
 </div>
 
 
-{#<footer class="copyright navbar-fixed-bottom" dir="ltr" style="height: 30px">#}
-{#  <div class="container">#}
-{#      <span><b>#}
-{#Tik Hinuch 2016</b></span>#}
-{#<a href="http://www.trump.org.il/en">#}
-{#          <img src="/static/img/Trump-logo.png" alt="Trump Foundation" height="70px" >#}
-{#        </a>&nbsp;&nbsp;&nbsp;&nbsp;#}
-{#         <a href="http://infosoc.haifa.ac.il/index.php/en/">#}
-{#          <img src="/static/img/IC_logo.png" alt="Internet Research Center" height="50px">#}
-{#        </a>&nbsp;&nbsp;&nbsp;&nbsp;#}
-{#        <a href="http://links.org.il/en">#}
-{#          <img src="/static/img/links_logo1.png" alt="LINKS" height="70px">#}
-{#        </a>&nbsp;&nbsp;&nbsp;&nbsp;#}
-{#        <a href="http://www.emind.co/">#}
-{#          <img  src="/static/img/emind-logo.png" alt="emind" height="50px">#}
-{#        </a>&nbsp;&nbsp;&nbsp;&nbsp;#}
-{##}
+<footer class="copyright" dir="ltr">
+    <div class="container">
+      <span style="color: black"><b>
+          Tik Hinuch 2016</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/avnerkantor/tikhinuch">
+                    <img src="{% static "img/GitHub-Mark.png" %}" height="30px">
+                </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.trump.org.il/en">
+            <img src="/static/img/Trump-logo.png" alt="Trump Foundation" height="50px">
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://infosoc.haifa.ac.il/index.php/en/">
+            <img src="/static/img/IC_logo.png" alt="Internet Research Center" height="40px">
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://links.org.il/en">
+            <img src="/static/img/links_logo1.png" alt="LINKS" height="50px">
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://haifa.ac.il/">
+            <img src="{% static "img/haifa2.png" %}" alt="Haifa University" height="50px">
+        </a>
+        {#        <a href="http://www.emind.co/">#}
+        {#          <img  src="/static/img/emind-logo.png" alt="emind" height="50px">#}
+        {#        </a>&nbsp;&nbsp;&nbsp;&nbsp;#}
 
-{#  </div>#}
-{#</footer>#}
+
+    </div>
+</footer>
 
 <!-- Core JS -->
 <script src="{% static "js/jquery.js" %}"></script>
