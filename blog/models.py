@@ -7,6 +7,7 @@ import datetime
 from django.core.urlresolvers import reverse
 from ckeditor.fields import RichTextField
 from  django.db.models import permalink
+# from managers import PostManger
 
 
 class Author(models.Model):
@@ -43,6 +44,12 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
+    # STATUS_CHOICES=(
+    #     ('d', 'טיוטה'),
+    #     ('a', 'ארכיון'),
+    #     ('p','פרסם')
+    # )
+
     # authors = models.ManyToManyField(Author)
     # author = models.ForeignKey('auth.User', blank=True, null=True, default=1)
     author = models.ForeignKey(Author, blank=True, null=True)
@@ -53,8 +60,11 @@ class Post(models.Model):
         default=timezone.now)
     published_date = models.DateTimeField('תאריך פרסום',
                                           default=timezone.now)
+    # modified = models.DateTimeField('modified', auto_now=True)
     category = models.ForeignKey(Category, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
+    # status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    # objects=PostManger()
 
     def __str__(self):
         return self.title
