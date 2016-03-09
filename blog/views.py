@@ -9,24 +9,7 @@ from .models import Post, Category, Author, Tag
 # from django.template import RequestContext
 # from django.http import HttpResponse, HttpResponseRedirect, Http404
 # from polls.models import Question, Choice
-def view_home(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
-    return render(request, '../templates/tikhinuch4/index.html', {'recentposts': recentposts})
 
-def view_home_en(request):
-    # posts = Post.objects.order_by('-published_date')[0:5]
-    return render(request, '../templates/tikhinuch4/index-en.html', {})
-
-def view_about(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
-    return render(request, 'blog/about.html', {'recentposts': recentposts})
-
-def view_about_en(request):
-    return render(request, 'blog/about-en.html', {})
-
-def view_grunts(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
-    return render(request, 'blog/grunts.html',{'recentposts': recentposts})
 
 def view_post_list(request):
     today = timezone.now().date()
@@ -66,4 +49,27 @@ def view_post_list(request):
 def view_post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+def view_home(request):
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, '../templates/tikhinuch4/index.html', {'recentposts': recentposts})
+
+def view_home_en(request):
+    # posts = Post.objects.order_by('-published_date')[0:5]
+    return render(request, '../templates/tikhinuch4/index-en.html', {})
+
+def view_about(request):
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, 'blog/about.html', {'recentposts': recentposts})
+
+def view_about_en(request):
+    return render(request, 'blog/about-en.html', {})
+
+def view_grunts(request):
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, 'blog/grunts.html',{'recentposts': recentposts})
+
+def view_pisa(request):
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
+    return render(request, 'blog/pisa.html', {'recentposts': recentposts})
 
