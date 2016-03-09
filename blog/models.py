@@ -10,7 +10,6 @@ from  django.db.models import permalink
 # from managers import PostManger
 
 
-
 class Author(models.Model):
     name = models.CharField('שם', max_length=50)
     email = models.EmailField('דואל', unique=True, null=True)
