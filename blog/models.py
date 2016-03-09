@@ -27,7 +27,8 @@ class Category(models.Model):
     cat_description = models.CharField('category description', max_length=255)
 
     class Meta:
-        verbose_name_plural = 'categories'
+        verbose_name='קטגוריה'
+        verbose_name_plural = 'קטגוריות'
 
     def __str__(self):
         return self.cat_name
@@ -55,13 +56,13 @@ class Post(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
-class Meta:
-    verbose_name = 'רשומה'
-    verbose_name_plural = 'רשומות'
+    class Meta:
+        verbose_name = 'רשומה'
+        verbose_name_plural = 'רשומות'
 
     # def get_absolute_url(self):
     #     return "/%s/%s/%s/" % (self.pub_date.year, self.pub_date.month, self.slug)
