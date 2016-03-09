@@ -15,12 +15,11 @@
                 {#                </h1>#}
 
                 {% for post in posts %}
-                    <div>
                     <h2><a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                     <p class="lead">
                         מאת {{ post.author }}
                     </p>
-{#                    <span class="glyphicon glyphicon-time"></span>#}
+                    {#                    <span class="glyphicon glyphicon-time"></span>#}
                     <p>פורסם ב-{{ post.published_date }}</p>
                     <hr>
 
@@ -30,34 +29,23 @@
 
                     <p>{{ post.text|safe }}</p>
                     <hr>
-                    </div>
                 {% endfor %}
 
 
-                <ul class="pager">
+                <span class="previous">
                     {% if posts.has_previous %}
-                        <li class="previous">
-                            <a href="?{{ page_request_var }}=
-
-                                    {{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">אחורה</a>
-                        </li>
+                            <a href="?{{ page_request_var }}={{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">עמוד קודם</a>
                     {% endif %}
-
+                </span>
                     <span class="current">
-            עמוד {{ posts.number }} מתוך {{ posts.paginator.num_pages }}
-        </span>
+                        עמוד {{ posts.number }} מתוך {{ posts.paginator.num_pages }}
+                    </span>
+                <span class="next">
                     {% if posts.has_next %}
-                        <li class="next">
-                            <a href="?{{ page_request_var }}=
-
-                                    {{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">קדימה</a>
-                        </li>
+                            <a href="?{{ page_request_var }}={{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">לעמוד הבא</a>
                     {% endif %}
-
-                </ul>
-
+                </span>
             </div>
-
             <div class="col-md-3">
 
                 <!-- Blog Search Well -->
