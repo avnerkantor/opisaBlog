@@ -44,11 +44,11 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
-    # STATUS_CHOICES=(
-    #     ('d', 'טיוטה'),
-    #     ('a', 'ארכיון'),
-    #     ('p','פרסם')
-    # )
+    STATUS_CHOICES=(
+        ('d', 'טיוטה'),
+        ('a', 'ארכיון'),
+        ('p','פרסם')
+    )
 
     # authors = models.ManyToManyField(Author)
     # author = models.ForeignKey('auth.User', blank=True, null=True, default=1)
@@ -60,10 +60,10 @@ class Post(models.Model):
         default=timezone.now)
     published_date = models.DateTimeField('תאריך פרסום',
                                           default=timezone.now)
-    # modified = models.DateTimeField('modified', auto_now=True, null=True)
+    modified = models.DateTimeField('modified', auto_now=True, null=True)
     category = models.ForeignKey(Category, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
-    # status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
     # objects=PostManger()
     #
     def __str__(self):
