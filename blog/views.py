@@ -13,7 +13,7 @@ from .models import Post, Category, Author, Tag
 
 def view_post_list(request):
     today = timezone.now().date()
-    posts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     # category = Category.objects.all()
     #
     query = request.GET.get("q")
@@ -51,7 +51,7 @@ def view_post_detail(request, slug):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def view_home(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
     return render(request, '../templates/tikhinuch4/index.html', {'recentposts': recentposts})
 
 def view_home_en(request):
@@ -59,17 +59,17 @@ def view_home_en(request):
     return render(request, '../templates/tikhinuch4/index-en.html', {})
 
 def view_about(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
     return render(request, 'blog/about.html', {'recentposts': recentposts})
 
 def view_about_en(request):
     return render(request, 'blog/about-en.html', {})
 
 def view_grunts(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
     return render(request, 'blog/grunts.html',{'recentposts': recentposts})
 
 def view_pisa(request):
-    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    recentposts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:5]
     return render(request, 'blog/pisa.html', {'recentposts': recentposts})
 
