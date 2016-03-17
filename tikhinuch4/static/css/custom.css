@@ -29,6 +29,14 @@ body {
     height: 50vh;
     margin: 10px auto;
 }
+.col-md-9{
+    min-height: 80vh;
+}
+
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+
 p {
     line-height: 1.7em;
 }
