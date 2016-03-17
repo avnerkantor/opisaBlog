@@ -1,86 +1,146 @@
 {% extends 'tikhinuch4/base.html' %}
-
+{% load staticfiles%}
 {% block content %}
     <div class="container">
 
         <div class="row">
 
             <div class="col-md-9">
-
-                <h1 style="text-align: center">כיצד מתקדם החינוך בישראל?</h1>
-
+<br><br>
+ <h1 style="text-align: center">כיצד מתקדם החינוך בישראל?</h1>
                 <!-- First Blog Post לגלות הישגים, לבחון מדדים -->
-                <h2>
-                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" target="pisa_iframe">האם ההישגים
-                        בעליה</a>
-                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa2" target="pisa_iframe" style="color: red">מה
-                        התלמידים מספרים</a>
-                    {#                                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa2#tab-7448-3" target="pisa_iframe" style="color: red">מה התלמידים מספרים</a>#}
-                    {#                                    <a id="aa" style="color: red">מה התלמידים מספרים</a>#}
-                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze" target="pisa_iframe"
-                       style="color: coral">מה מראים המדדים</a>
-                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Search" target="pisa_iframe"
-                                 style="color: brown">מילון פיזה</a>
-                </h2>
-                <iframe style="width: 100%; height: 100vh; frameborder:0; scrolling:no"
-                        ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" name="pisa_iframe"
-                        id="myiframe"></iframe>
-                {#                <h2><a id="PisaLink" href="javascript:void(0);">האם ההישגים בעליה</a>#}
-                {#                    <a id="Pisa2Link" href="javascript:void(0);" style="color:red;">מה מספרים התלמידים</a>#}
-                {#                    <a id="AnalyzeLink" href="javascript:void(0);" style="color: coral">מה מראים המדדים</a>#}
+                {#                <h2>#}
+                {#                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" target="pisa_iframe">האם ההישגים#}
+                {#                        בעליה</a>#}
+                {#                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa2" target="pisa_iframe" style="color: red">מה#}
+                {#                        התלמידים מספרים</a>#}
+                {#                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa2#tab-7448-3" target="pisa_iframe"#}
+                {#                       style="color: red">מה התלמידים מספרים</a>#}
+                {#                    <a id="aa" style="color: red">מה התלמידים מספרים</a>#}
+                {#                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze" target="pisa_iframe"#}
+                {#                       style="color: coral">מה מראים המדדים</a>#}
+                {#                    <a href="http://130.211.111.52/shiny/tikhinuch/?tab=Search" target="pisa_iframe"#}
+                {#                       style="color: brown">מילון פיזה</a>#}
                 {#                </h2>#}
-                {#                <div id="Pisa">#}
-                {#                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
-                {#                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b"></iframe>#}
-                {#                </div>#}
-                {#                <div id="Pisa2">#}
-                {#                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
-                {#                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa2"></iframe>#}
-                {#                </div>#}
-                {#                <div id="Analyze">#}
-                {#                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
-                {#                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze"></iframe>#}
-                {#                </div>#}
-                {#                <div id="Search">#}
-                {#                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
-                {#                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Search"></iframe>#}
-                {#                </div>#}
-                {#                <h3 dir="ltr">#}
-                {#                 <a id="SearchLink" href="javascript:void(0);" style="color: black; " >מילון המשתנים</a></h3>#}
-                {##}
-{#                <h2 dir="ltr"><a href="http://130.211.111.52/shiny/tikhinuch/?tab=Search" target="pisa_iframe"#}
-{#                                 style="color: black">מילון משתנים</a></h2>#}
+                {#                <iframe style="width: 100%; height: 100vh; frameborder:0; scrolling:no"#}
+                {#                        ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b" name="pisa_iframe"#}
+                {#                        id="myiframe"></iframe>#}
+
+                <h2 style="text-align: center"><a href="/achievements">האם ההישגים בעליה</a>
+                    <a href="/students" style="color:red;">מה מספרים התלמידים</a><br>
+                    <a href="/analyze" style="color: coral">מה מראים המדדים</a>
+                    <a href="/dictionary" style="color: greenyellow">מילון</a>
+                </h2>
+                {% block index %}
+                    <br>
+
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+       <img src="{% static "img/carousel/1.png" %}" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+    <div class="item">
+       <img src="{% static "img/carousel/2.png" %}" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div>
+          <div class="item">
+      <img src="{% static "img/carousel/2.png" %}" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+          <div class="item">
+      <img src="{% static "img/carousel/2.png" %}" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+                    <br><br>
+                {% endblock %}
+
+
+            {#                                <h2><a id="PisaLink" href="javascript:void(0);">האם ההישגים בעליה</a>#}
+            {#                                    <a id="Pisa2Link" href="javascript:void(0);" style="color:red;">מה מספרים התלמידים</a>#}
+            {#                                    <a id="AnalyzeLink" href="javascript:void(0);" style="color: coral">מה מראים המדדים</a>#}
+            {#                                </h2>#}
+            {#                                <div id="Pisa">#}
+            {#                                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
+            {#                                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa1b"></iframe>#}
+            {#                                </div>#}
+            {#                                <div id="Pisa2">#}
+            {#                                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
+            {#                                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Pisa2"></iframe>#}
+            {#                                </div>#}
+            {#                                <div id="Analyze">#}
+            {#                                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
+            {#                                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Analyze"></iframe>#}
+            {#                                </div>#}
+            {#                                <div id="Search">#}
+            {#                                    <iframe style="width: 100%; height: 100vh;frameborder:0; scrolling:no"#}
+            {#                                            ; src="http://130.211.111.52/shiny/tikhinuch/?tab=Search"></iframe>#}
+            {#                                </div>#}
+            {#                                <h3 dir="ltr">#}
+            {#                                 <a id="SearchLink" href="javascript:void(0);" style="color: black; " >מילון המשתנים</a></h3>#}
+
+            {#                                <h2 dir="ltr"><a href="http://130.211.111.52/shiny/tikhinuch/?tab=Search" target="pisa_iframe"#}
+            {#                                                 style="color: black">מילון משתנים</a></h2>#}
+        </div>
+        <div class="col-md-3">
+            <div class="well">
+                <h4><a href="/about">מהו תיק חינוך</a></h4>
+
+                <p> תיק חינוך היא יוזמה משותפת לקרן טראמפ ולמרכז לחקר האינטרנט באוניברסיטת חיפה שמטרתה להנגיש לציבור
+                    ולחוקרים את תמונת החינוך בישראל כפי שהיא משתקפת בנתוני מבחן פיז"ה הבינלאומי. </p>
+
+                <p>זוהי מערכת ראשונה מסוגה בעולם אשר מאפשרת ללמוד את הגורמים המשפיעים והמעצבים את החינוך. </p>
             </div>
-            <div class="col-md-3">
-                <div class="well">
-                    <h4><a href="/about">מהו תיק חינוך</a></h4>
 
-                    <p> תיק חינוך היא יוזמה משותפת לקרן טראמפ ולמרכז לחקר האינטרנט באוניברסיטת חיפה שמטרתה להנגיש לציבור
-                        ולחוקרים את תמונת החינוך בישראל כפי שהיא משתקפת בנתוני מבחן פיז"ה הבינלאומי. </p>
+            <div class="well">
+                <h4><a href="/blog">רשומות אחרונות</a></h4>
 
-                    <p>זוהי מערכת ראשונה מסוגה בעולם אשר מאפשרת ללמוד את הגורמים המשפיעים והמעצבים את החינוך. </p>
+                <div class="row">
+                    <ol>
+                        {% for post in recentposts %}
+
+                            <li><a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></li>
+
+
+                        {% endfor %}
+                    </ol>
                 </div>
-
-                <div class="well">
-                    <h4><a href="/blog">רשומות אחרונות</a></h4>
-
-                    <div class="row">
-                        <ol>
-                            {% for post in recentposts %}
-
-                                    <li><a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></li>
-
-
-                            {% endfor %}
-                        </ol>
-                    </div>
-                </div>
-                <div class="well">
-                    <h4><a href="/grunts">קול קורא למחקר</a></h4>
-                    פרטים בקרוב.
-                </div>
+            </div>
+            <div class="well">
+                <h4><a href="/grunts">קול קורא למחקר</a></h4>
+                פרטים בקרוב.
             </div>
         </div>
+    </div>
     </div>
 
 {% endblock content %}

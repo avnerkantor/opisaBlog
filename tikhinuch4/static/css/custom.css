@@ -18,8 +18,17 @@ body {
     font-family: 'Open Sans', 'Trebuchet MS', arial, sans-serif;
     font-size: 14px;
 }
+.carousel-control.right, .carousel-control.left {
+  background-image:none;
+}
+.carousel {
+    background:none;
+    position: relative;
+    padding: 10px;
 
-
+    height: 50vh;
+    margin: 10px auto;
+}
 p {
     line-height: 1.7em;
 }

@@ -73,3 +73,15 @@ def view_pisa(request):
     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
     return render(request, 'blog/pisa.html', {'recentposts': recentposts})
 
+def view_achievements(request):
+    return render(request, 'blog/achievements.html', {})
+
+def view_students(request):
+    return render(request, 'blog/students.html', {})
+
+def view_analyze(request):
+    return render(request, 'blog/analyze.html', {})
+
+def view_dictionary(request):
+    return render(request, 'blog/dictionary.html', {})
+
