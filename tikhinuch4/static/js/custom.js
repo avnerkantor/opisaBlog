@@ -1,31 +1,36 @@
 
 $(function(){
-    $("#Pisa2").hide();
-    $("#Analyze").hide();
-     $('#Search').hide();
+    $("#achievements").hide();
+    $("#students").hide();
+    $("#analyze").hide();
+     $('#dictionary').hide();
   $('#PisaLink').click(function(){
-     $('#Pisa').show();
-      $("#Pisa2").hide();
-     $('#Analyze').hide();
-     $('#Search').hide();
+       $("#carousel").hide();
+     $('#achievements').show();
+      $("#students").hide();
+     $('#analyze').hide();
+     $('#dictionary').hide();
   });
     $('#Pisa2Link').click(function(){
-     $('#Pisa').hide();
-      $("#Pisa2").show();
-     $('#Analyze').hide();
-     $('#Search').hide();
+         $("#carousel").hide();
+     $('#achievements').hide();
+      $("#students").show();
+     $('#analyze').hide();
+     $('#dictionary').hide();
   });
   $('#AnalyzeLink').click(function(){
-     $('#Pisa').hide();
-      $("#Pisa2").hide();
-      $('#Search').hide();
-     $('#Analyze').show();
+       $("#carousel").hide();
+     $('#achievements').hide();
+      $("#students").hide();
+      $('#dictionary').hide();
+     $('#analyze').show();
   });
     $('#SearchLink').click(function(){
-     $('#Pisa').hide();
-        $("#Pisa2").hide();
-      $('#Search').show();
-     $('#Analyze').hide();
+         $("#carousel").hide();
+     $('#achievements').hide();
+        $("#students").hide();
+      $('#dictionary').show();
+     $('#analyze').hide();
   });
 });
 
