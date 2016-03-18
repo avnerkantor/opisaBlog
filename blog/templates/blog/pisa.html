@@ -1,13 +1,12 @@
 {% extends 'tikhinuch4/base.html' %}
 {% load staticfiles %}
-
+{% block title %}פיז"ה{% endblock %}
 {% block content %}
     <div class="container">
 
     <div class="row">
         <div class="col-md-9" dir="rtl" style="text-align: right; font-size: large;">
             <h3>מהו מבחן פיז"ה?</h3>
-
             <p>
                 מבחן פיז"ה (באנגלית: Programme for International Student Assessment, ר"ת PISA) הוא מבחן הנערך כחלק
                 ממחקר בינלאומי בתחום החינוך, המתקיים אחת לשלוש שנים על ידי מנהל החינוך של הארגון לשיתוף פעולה
@@ -57,8 +56,7 @@
                href="javascript:void(0)">
                 תלמידים ומחשבים
             </a>
-<br><br>
-            <a href="http://cms.education.gov.il/EducationCMS/UNITS/Rama">לאתר ראמ"ה</a>
+
 
             <div class="collapse" id="StudentsComputersReportREV">
                 <object width="100%" height="500" type="application/pdf"
@@ -66,6 +64,8 @@
                         id="pdf_content">
                 </object>
             </div>
+            <br><br>
+            <a href="http://cms.education.gov.il/EducationCMS/UNITS/Rama">לאתר ראמ"ה</a>
             <hr>
             <h3>OECD products</h3>
                   <a data-toggle="collapse" data-target="#PISADataAnalysisManual" aria-expanded="false"

@@ -30,7 +30,7 @@ body {
     margin: 10px auto;
 }
 .col-md-9{
-    min-height: 80vh;
+    min-height: 90vh;
 }
 
 .dropdown:hover .dropdown-menu {
