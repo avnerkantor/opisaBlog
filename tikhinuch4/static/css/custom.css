@@ -21,14 +21,7 @@ body {
 .carousel-control.right, .carousel-control.left {
   background-image:none;
 }
-.carousel {
-    background:none;
-    position: relative;
-    padding: 10px;
 
-    height: 50vh;
-    margin: 10px auto;
-}
 .col-md-9{
     min-height: 90vh;
 }
