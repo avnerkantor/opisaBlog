@@ -27,12 +27,12 @@ body {
     margin-right: auto;
   margin-left: auto;
   max-width: 1600px; /* or 950px */
-    min-width: 100%;
+    min-width: 95%;
 }
 .container{
     margin-right: auto;
   margin-left: auto;
-    min-width:100%;
+    min-width:95%;
   max-width: 1600px; /* or 950px */
 }
 .col-md-9{
