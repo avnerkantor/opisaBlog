@@ -14,6 +14,7 @@ from .models import Post, Category, Author, Tag
 def view_post_list(request):
     today = timezone.now().date()
     posts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')
+    selectedPost = Post.objects.filter(title="עמודת צד")
     # category = Category.objects.all()
     #
     query = request.GET.get("q")
@@ -41,6 +42,7 @@ def view_post_list(request):
         "title":"list",
         "page_request_var":page_request_var,
         "today": today,
+        #'selectedPost': selectedPost,
     }
 
     return render(request, 'blog/post_list.html', context)
@@ -60,7 +62,8 @@ def view_home_en(request):
 
 def view_about(request):
     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-    return render(request, 'blog/about.html', {'recentposts': recentposts})
+    selectedPost = Post.objects.filter(title="אודות")
+    return render(request, 'blog/about.html', {'recentposts': recentposts, 'selectedPost': selectedPost})
 
 def view_about_en(request):
     return render(request, 'blog/about-en.html', {})
@@ -71,5 +74,6 @@ def view_grunts(request):
 
 def view_pisa(request):
     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-    return render(request, 'blog/pisa.html', {'recentposts': recentposts})
+    selectedPost = Post.objects.filter(title='מבחן פיז"ה')
+    return render(request, 'blog/pisa.html', {'recentposts': recentposts, 'selectedPost': selectedPost})
 

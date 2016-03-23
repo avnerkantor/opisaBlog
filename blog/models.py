@@ -48,6 +48,7 @@ class Post(models.Model):
     STATUS_CHOICES=(
         ('d', 'טיוטה'),
         ('a', 'ארכיון'),
+        ('t', 'עמוד'),
         ('p','פרסם')
     )
 
