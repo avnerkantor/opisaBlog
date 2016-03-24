@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!-->
 <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-    <title>Tik Hinuch - PISA Stories{% block title %} {% endblock title %}</title>
+    <title>{% block title %}PISA Stories Explorer{% endblock title %}</title>
     <meta charset="utf-8">
     {#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@
 
 </head>
 
-<body class=" ">
+<body>
 
 <div id="wrapper">
 
@@ -64,25 +64,20 @@
                         <img src="/static/img/IC_logo.png" alt="Internet Research Center" height="50pvh"></a>
                 </ul>
                 <ul class="nav navbar-nav navbar-left mainnav-menu">
-
-
-                    {#                    <li>#}
-                    {##}
-                    {#                        <a href="/en/blog">#}
-                    {#                            Blog#}
-                    {#                        </a>#}
-                    {##}
-                    {#                    </li>#}
-                    {#                    <li>#}
-                    {#                        <a href="/en/about">#}
-                    {#                            About#}
-                    {#                        </a>#}
-                    {#                    </li>#}
+{#                    <li>#}
+{#                        <a href="/en/blog">#}
+{#                            Blog#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="/en/about">#}
+{#                            About#}
+{#                        </a>#}
+{#                    </li>#}
                     <li>
                         <a href="/../">
                             עברית
                         </a>
-
                     </li>
                 </ul>
 
@@ -91,9 +86,9 @@
         </div> <!-- /.container -->
 
     </header>
-    {% block content %}
+    {% block content-en %}
 
-    {% endblock content %}
+    {% endblock %}
 </div>
 
 
@@ -101,12 +96,12 @@
     <div class="container">
       <span style="color: black"><b>
           Tik Hinuch 2016</b></span>
-<a href="mailto:avner@tikhinuch.org">
-                    <img src="{% static "img/mail.png" %}" height="30px">
-                </a>
+        <a href="mailto:avner@tikhinuch.org">
+            <img src="{% static "img/mail.png" %}" height="30px">
+        </a>
         <a href="https://github.com/avnerkantor/tikhinuch">
-                    <img src="{% static "img/GitHub-Mark.png" %}" height="30px">
-                </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static "img/GitHub-Mark.png" %}" height="30px">
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="http://www.trump.org.il/en">
             <img src="/static/img/Trump-logo.png" alt="Trump Foundation" height="50px">
         </a>
@@ -116,7 +111,7 @@
         <a href="http://links.org.il/en">
             <img src="/static/img/links_logo1.png" alt="LINKS" height="50px">
         </a>
-            <img src="{% static "img/haifa2.png" %}" alt="Haifa University" height="50px">
+        <img src="{% static "img/haifa2.png" %}" alt="Haifa University" height="50px">
         </a>
         {#        <a href="http://www.emind.co/">#}
         {#          <img  src="/static/img/emind-logo.png" alt="emind" height="50px">#}

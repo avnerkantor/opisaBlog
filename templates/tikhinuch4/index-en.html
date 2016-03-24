@@ -1,20 +1,20 @@
 {% extends 'tikhinuch4/base-en.html' %}
+{% load staticfiles %}
 
-{% block content %}
+{% block content-en %}
     <div class="container">
 
         <div class="row">
 
-                        <div class="col-md-12">
+            <div class="col-md-12">
 
-            <h1>PISA Data Stories Explorer
-            </h1>
+                <h1>PISA Stories Explorer
+                </h1>
 
-
-            <iframe name="iframe_pisa_en" style="width: 100%; height: 100vh;frameborder:0; scrolling:no"
-                    ; src="http://130.211.111.52/shiny/tikhinuch1en/?tab=Pisa1English"></iframe>
-</div>
+                            <iframe name="iframe_pisa_en" style="width: 100%; height: 110vh;frameborder:0; scrolling:no"
+                                    ; src="http://130.211.111.52/shiny/tikhinuch1en/?tab=Pisa1English"></iframe>
+            </div>
         </div>
     </div>
 
-{% endblock content %}
+{% endblock %}
