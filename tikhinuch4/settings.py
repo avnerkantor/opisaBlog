@@ -145,7 +145,7 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
-    "/static",
+    # "/static",
 )
 
 # Parse database configuration from $DATABASE_URL
