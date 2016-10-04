@@ -27,7 +27,7 @@ SECRET_KEY = '&s^4!!#bz5!=q*i9w3xa!123cn^8@!w^nifb9em228wvb&xwf4'
 
 INSTALLED_APPS = [
     'django.contrib.sites',
-    'polls.apps.PollsConfig',
+    # 'polls.apps.PollsConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'disqus',
     'ckeditor',
+    # 'corsheaders',
     # 'blog',
     # 'allauth',
     # 'allauth.account',
@@ -54,11 +55,20 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'tikhinuch4.urls'
+
+# CORS_ORIGIN_ALLOW_ALL = True
+#
+# CORS_ORIGIN_WHITELIST = (
+#     'http://google.com',
+#     'http://dropbox.com'
+# )
 
 TEMPLATES = [
     {
@@ -71,6 +81,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
+                'django.core.context_processors.static',
             ],
         },
     },
@@ -127,13 +139,15 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media/")
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
+    "/static",
 )
 
-#
 # Parse database configuration from $DATABASE_URL
 
 # Update database configuration with $DATABASE_URL.

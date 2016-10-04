@@ -1,0 +1,137 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <title>{% block title %}PISA Stories Explorer{% endblock title %}</title>
+    <meta charset="utf-8">
+    {#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Google Font: Open Sans -->
+    <link rel="stylesheet" href="{% static "css/opensans.css" %}">
+    <link rel="stylesheet" href="{% static "css/Oswald.css" %}">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/animate.min.css" %}">
+
+    {#    <link rel="stylesheet" href="{% static "css/vegas.min.css" %}">#}
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <!-- Favicon -->
+    <link rel="short/cut icon" href="{% static "img/bag-512.png" %}">
+
+    {#      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->#}
+    {#  <!--[if lt IE 9]>#}
+    <script src="{% static "js/html5shiv.min.js" %}"></script>
+    <script src="{% static "js/respond.min.js" %}"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <header class="navbar" role="banner">
+
+        <div class="container">
+
+            <div class="navbar-header">
+                <a href="/en" class="navbar-brand navbar-brand-img">
+                    <img src="/static/img/logo2.png" alt="Tik Hinuch" height="30px" style="margin-top: 10px">
+                </a>
+
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Navigate</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div> <!-- /.navbar-header -->
+
+
+            <nav class="collapse navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right mainnav-menu">
+                    <a href="http://www.trump.org.il/en">
+                        <img src="/static/img/Trump-logo.png" alt="Trump Foundation" height="60vh">
+                    </a>
+                    <a href="http://infosoc.haifa.ac.il/index.php/en/">
+                        <img src="/static/img/IC_logo.png" alt="Internet Research Center" height="50pvh"></a>
+                </ul>
+                <ul class="nav navbar-nav navbar-left mainnav-menu">
+{#                    <li>#}
+{#                        <a href="/en/blog">#}
+{#                            Blog#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="/en/about">#}
+{#                            About#}
+{#                        </a>#}
+{#                    </li>#}
+                    <li>
+                        <a href="/../">
+                            עברית
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div> <!-- /.container -->
+
+    </header>
+    {% block content-en %}
+
+    {% endblock %}
+</div>
+
+
+<footer class="copyright" dir="ltr">
+    <div class="container">
+      <span style="color: black"><b>
+          Tik Hinuch 2016</b></span>
+        <a href="mailto:avner@tikhinuch.org">
+            <img src="{% static "img/mail.png" %}" height="30px">
+        </a>
+        <a href="https://github.com/avnerkantor/tikhinuch">
+            <img src="{% static "img/GitHub-Mark.png" %}" height="30px">
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.trump.org.il/en">
+            <img src="/static/img/Trump-logo.png" alt="Trump Foundation" height="50px">
+        </a>
+        <a href="http://infosoc.haifa.ac.il/index.php/en/">
+            <img src="/static/img/IC_logo.png" alt="Internet Research Center" height="40px">
+        </a>
+        <a href="http://links.org.il/en">
+            <img src="/static/img/links_logo1.png" alt="LINKS" height="50px">
+        </a>
+        <img src="{% static "img/haifa2.png" %}" alt="Haifa University" height="50px">
+        </a>
+        {#        <a href="http://www.emind.co/">#}
+        {#          <img  src="/static/img/emind-logo.png" alt="emind" height="50px">#}
+        {#        </a>&nbsp;&nbsp;&nbsp;&nbsp;#}
+
+
+    </div>
+</footer>
+
+<!-- Core JS -->
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+
+<script src="{% static "js/jquery.slimscroll.min.js" %}"></script>
+
+
+<!-- App JS -->
+<script src="{% static "js/custom.js" %}"></script>
+{#      <![endif]-->#}
+</body>
+
+
+</html>
