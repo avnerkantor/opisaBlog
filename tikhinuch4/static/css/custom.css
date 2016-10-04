@@ -12,7 +12,7 @@ body {
     /*margin-right: 5px;*/
     /*margin-left: 5px;*/
     font-family: 'OpenSansHebrewRegular', sans-serif;
-    background-image: url("/static/img/bg.jpg");
+    /*background-image: url("/static/img/bg.jpg");*/
     position: relative;
     margin: 0;
     z-index: 1;
@@ -20,7 +20,7 @@ body {
 
 /*navbar*/
 nav {
-    background-image: url("/static/img/bg.jpg");
+    /*background-image: url("/static/img/bg.jpg");*/
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -41,7 +41,7 @@ nav {
 
 #header-image {
 
-    background-image: url("/static/img/PISA_TopBG.jpg");
+    /*background-image: url("/static/img/PISA_TopBG.jpg");*/
     background-position: right;
     width: 100%;
     height: 180px;
