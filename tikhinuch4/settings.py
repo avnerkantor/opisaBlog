@@ -27,7 +27,6 @@ SECRET_KEY = '&s^4!!#bz5!=q*i9w3xa!123cn^8@!w^nifb9em228wvb&xwf4'
 
 INSTALLED_APPS = [
     'django.contrib.sites',
-    # 'polls.apps.PollsConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
