@@ -3,8 +3,8 @@ dj-database-url==0.4.0
 Django==1.9.4
 django-ckeditor==5.0.2
 django-disqus==0.5
-gunicorn==19.4.5
-psycopg2==2.6.1
+gunicorn==19.6.0
+psycopg2==2.6.2
 six==1.10.0
-wheel==0.24.0
-whitenoise==2.0.6
+wheel==0.29.0
+whitenoise==3.2.2

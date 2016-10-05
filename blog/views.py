@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, render_to_response
 from django.utils import timezone
 from django.db.models import Q
 from .models import Post, Category, Author, Tag
-import csv
+# import csv
 from django.http import HttpResponse
 
 
