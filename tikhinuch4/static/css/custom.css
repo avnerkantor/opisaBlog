@@ -62,7 +62,7 @@ nav {
 .affix {
     top: 50px;
     width: 100%;
-    background-image: url("img/bg.jpg");
+    background-image: url("/static/img/bg.jpg");
     z-index: 2;
 }
 
