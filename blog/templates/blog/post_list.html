@@ -16,19 +16,19 @@
 
                 {% for post in posts %}
                     <h2><a href="{% url 'blog:post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
-                    <p class="lead">
-                        מאת {{ post.author }}
-                    </p>
+{#                    <p class="lead">#}
+{#                        מאת {{ post.author }}#}
+{#                    </p>#}
                     {#                    <span class="glyphicon glyphicon-time"></span>#}
-                    <p>פורסם ב-{{ post.published_date }}</p>
-                    <hr>
-
-                    <h3 class="post-subtitle">
-                        {{ article.subtitle }}
-                    </h3>
-
-                    <p>{{ post.text|safe }}</p>
-                    <hr>
+{#                    <p>פורסם ב-{{ post.published_date }}</p>#}
+{#                    <hr>#}
+{##}
+{#                    <h3 class="post-subtitle">#}
+{#                        {{ article.subtitle }}#}
+{#                    </h3>#}
+{##}
+{#                    <p>{{ post.text|safe }}</p>#}
+{#                    <hr>#}
                 {% endfor %}
 
                 <div class="col-md-9">
