@@ -19,16 +19,16 @@
                     <p class="lead">
                         מאת {{ post.author }}
                     </p>
-                                        <span class="glyphicon glyphicon-time"></span>
-                    <p>פורסם ב-{{ post.published_date }}</p>
+                    <span class="glyphicon glyphicon-time"></span>
+                    פורסם ב-{{ post.published_date }}
                     <hr>
 
                     <h3 class="post-subtitle">
                         {{ article.subtitle }}
                     </h3>
-{##}
-{#                    <p>{{ post.text|safe }}</p>#}
-{#                    <hr>#}
+                    {##}
+                    {#                    <p>{{ post.text|safe }}</p>#}
+                    {#                    <hr>#}
                 {% endfor %}
 
                 <div class="col-md-9">
@@ -37,6 +37,7 @@
                 <span class="previous">
                     {% if posts.has_previous %}
                         <a href="?{{ page_request_var }}=
+
                                 {{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">עמוד קודם</a>
                     {% endif %}
                 </span>
