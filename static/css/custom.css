@@ -59,7 +59,7 @@ nav {
 
 }
 
-a{
+a, a:hover{
     color:black;
 }
 /*!*.disqus-footer{*!*/
