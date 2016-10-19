@@ -60,3 +60,15 @@ nav {
 a, a:hover{
     color: black;
 }
+
+#TrumpLogo {
+    height: 45px;
+    position: absolute;
+    left: 10px;
+}
+#IC_logo{
+   height: 40px;
+    position: absolute;
+    left: 100px;
+    padding-top: 5px;
+}

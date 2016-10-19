@@ -4,22 +4,17 @@
 <!DOCTYPE html>
 <html lang="he" class="no-js">
 <head>
-{#להקליק את הנתונים. לבחון את פיזה.#}
-{#   <title> {% block title %}תיק חינוך - לראות נתונים{% endblock %}</title>#}
-<title> {% block title %}תיק חינוך - בלוג{% endblock %}</title>
+<title> {% block title %}תיק-חינוך|רשומות{% endblock %}</title>
     <meta charset="utf-8">
     {#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=' תיק חינוך היא יוזמה משותפת לקרן טראמפ ולמרכז לחקר האינטרנט באוניברסיטת חיפה שמטרתה להנגיש לציבור ולחוקרים את תמונת החינוך בישראל כפי שהיא משתקפת בנתוני מבחן פיז"ה הבינלאומי. '>
     <meta name="author" content="אבנר קנטור">
 
-    <link rel="stylesheet" href="{% static "css/opensans.css" %}">
-    <link rel="stylesheet" href="{% static "css/Oswald.css" %}">
-    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "css/bootstrap-rtl.min.css" %}">
     <link rel="stylesheet" href="{% static "css/custom.css" %}">
-{#    <link rel="short/cut icon" href="{% static "img/bag-512.png" %}">#}
+    <link rel="short/cut icon" href="{% static "img/bag-512.png" %}">
     <script src="{% static "js/html5shiv.min.js" %}"></script>
     <script src="{% static "js/respond.min.js" %}"></script>
 
@@ -30,9 +25,8 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <!--<li>-->
-                <!--<a class="page-scroll" href="#en">אנגלית</a>-->
-                <!--</li>-->
+                <a  href="http://www.trump.org.il/"><img id="TrumpLogo" src="{% static "img/Trump-logo.png" %}" ></a>
+               <a  href="http://infosoc.haifa.ac.il/index.php/he/"><img id="IC_logo" src="{% static "img/IC_logo.png" %}" ></a>
                 <li class="active">
                 <a class="page-scroll" href="/">בלוג</a>
                 </li>
