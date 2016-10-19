@@ -62,13 +62,14 @@ a, a:hover{
 }
 
 #TrumpLogo {
-    height: 45px;
+    width: 80px;
     position: absolute;
     left: 10px;
+    padding-top: 2px;
 }
 #IC_logo{
-   height: 40px;
+   width: 185px;
     position: absolute;
     left: 100px;
-    padding-top: 5px;
+    padding-top: 6px;
 }
