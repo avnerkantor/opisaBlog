@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 
 urlpatterns = [
                   url(r'', include('blog.urls')),
+                    #url(r'^posts/', include("posts.urls", namespace='posts')),
                     # url(r'^$', view_home, name='home'),
                   # url(r'^en/', view_home_en),
                   # url(r'^new/', view_home_new),
@@ -22,3 +23,4 @@ urlpatterns = [
               ]
 if settings.DEBUG is True:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_ROOT, document_root=settings.STATIC_ROOT)
