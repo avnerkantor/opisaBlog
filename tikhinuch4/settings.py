@@ -168,13 +168,10 @@ DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7
 DISQUS_WEBSITE_SHORTNAME = 'tikhinuch'
 
 SITE_ID = 1
-
+AWS_QUERYSTRING_AUTH = False
 # CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
 CKEDITOR_RESTRICT_BY_USER = True
-
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
