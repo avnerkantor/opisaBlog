@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'disqus',
     'ckeditor',
+    'ckeditor_uploader',
     # 'corsheaders',
     # 'blog',
     # 'allauth',
@@ -168,7 +169,7 @@ DISQUS_WEBSITE_SHORTNAME = 'tikhinuch'
 
 SITE_ID = 1
 
-CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+# CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
