@@ -6,7 +6,7 @@ from django.template.defaultfilters import slugify
 from django.utils import timezone
 import datetime
 from django.core.urlresolvers import reverse
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from  django.db.models import permalink
 # from managers import PostManger
 
@@ -58,7 +58,8 @@ class Post(models.Model):
     title = models.CharField('כותרת', max_length=200, db_index=True, unique=True)
     slug = models.SlugField(max_length=200, unique=True, db_index=True, allow_unicode=True, null=True, blank=True)
     image=models.FileField(null=True, blank=True)
-    text = RichTextField('טקסט')
+    summary=models.CharField(max_length=400, null=True, blank=True)
+    text = RichTextUploadingField('טקסט')
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField('תאריך פרסום',
