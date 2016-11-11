@@ -28,7 +28,7 @@ def post_list(request):
             # Q(categories=query)
         ).distinct()
 
-    paginator = Paginator(posts, 10)
+    paginator = Paginator(posts, 5)
     page_request_var = "page"
     page = request.GET.get(page_request_var)
 
