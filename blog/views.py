@@ -55,6 +55,11 @@ def post_detail(request, slug):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 
+def post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    return render(request, 'blog/post.html', {'post': post})
+
+
 # def view_home(request):
 #     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
 #     return render(request, '../templates/tikhinuch4/index.html', {'recentposts': recentposts})

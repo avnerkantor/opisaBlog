@@ -8,7 +8,6 @@
                 {#                    Page Heading#}
                 {#                    <small>Secondary Text</small>#}
                 {#                </h1>#}
-
                 {% for post in posts %}
                     <a href="{% url 'blog:post_detail' slug=post.slug %}">
                         <h2>{{ post.title }}</h2>
