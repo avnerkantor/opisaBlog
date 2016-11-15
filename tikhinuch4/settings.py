@@ -149,17 +149,19 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 # DEFAULT_FILE_STORAGE = 'ckeditor.backends.s3boto.S3BotoStorage_AllPublic'
 AWS_ACCESS_KEY_ID = 'AKIAJPC2Q4AQF7ADFFPQ'
 AWS_SECRET_ACCESS_KEY = 'Mdzn4fXuUPDTsjPYGVKPtBa1S'
-AWS_STORAGE_BUCKET_NAME = 'opisa'
+AWS_STORAGE_BUCKET_NAME = 'opisa1'
 
 DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
-DISQUS_WEBSITE_SHORTNAME = 'פיז"ה פתוח'
+DISQUS_WEBSITE_SHORTNAME = "tikhinuch"
 
 SITE_ID = 1
 AWS_QUERYSTRING_AUTH = False
-# CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-CKEDITOR_UPLOAD_PATH = "uploads"
+CKEDITOR_UPLOAD_PATH = "upload/"
 AWS_DEFAULT_ACL = 'public-read'
+CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_UPLOAD_PREFIX = "http://opisa.org/media/"
+CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
 
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_CONFIGS = {

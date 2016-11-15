@@ -59,7 +59,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True, db_index=True, allow_unicode=True, null=True, blank=True)
     image=models.FileField(null=True, blank=True)
     summary=models.CharField(max_length=400, null=True, blank=True)
-    text = RichTextUploadingField('טקסט')
+    text = RichTextUploadingField()
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField('תאריך פרסום',
