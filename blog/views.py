@@ -62,10 +62,6 @@ def post(request, slug):
     return render(request, 'blog/post.html', {'post': post})
 
 
-# def view_recentposts(request):
-#     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-#     return render(request, 'blog/post_list.html', {'recentposts': recentposts})
-
 
 # def view_home_en(request):
 #     # posts = Post.objects.order_by('-published_date')[0:5]
@@ -96,10 +92,3 @@ def post(request, slug):
 # def view_home_new(request):
 #     return render(request, '../templates/tikhinuch4/index2.html', {})
 #
-# def myview(_request):
-#     response = HttpResponse(json.dumps({"key": "value", "key2": "value"}))
-#     response["Access-Control-Allow-Origin"] = "*"
-#     response["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
-#     response["Access-Control-Max-Age"] = "1000"
-#     response["Access-Control-Allow-Headers"] = "*"
-#     return response
