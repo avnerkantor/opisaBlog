@@ -16,7 +16,8 @@ from django.http import HttpResponse
 def post_list(request):
     today = timezone.now().date()
     posts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')
-    selectedPost = Post.objects.filter(title="עמודת צד")
+    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    # selectedPost = Post.objects.filter(title="עמודת צד")
     # category = Category.objects.all()
     #
     query = request.GET.get("q")
@@ -44,7 +45,7 @@ def post_list(request):
         "title": "list",
         "page_request_var": page_request_var,
         "today": today,
-        # 'selectedPost': selectedPost,
+        "recentposts":recentposts,
     }
 
     return render(request, 'blog/post_list.html', context)
@@ -52,7 +53,8 @@ def post_list(request):
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    return render(request, 'blog/post_detail.html', {'post': post, 'recentposts':recentposts})
 
 
 def post(request, slug):
@@ -60,9 +62,9 @@ def post(request, slug):
     return render(request, 'blog/post.html', {'post': post})
 
 
-# def view_home(request):
+# def view_recentposts(request):
 #     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-#     return render(request, '../templates/tikhinuch4/index.html', {'recentposts': recentposts})
+#     return render(request, 'blog/post_list.html', {'recentposts': recentposts})
 
 
 # def view_home_en(request):
