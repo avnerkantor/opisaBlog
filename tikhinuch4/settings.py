@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'disqus',
     'ckeditor',
     'ckeditor_uploader',
+    'storages',
     # 'blog',
 ]
 
@@ -143,6 +144,9 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 # Simplified static file serving.
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 
 DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
 DISQUS_WEBSITE_SHORTNAME = 'tikhinuch'
