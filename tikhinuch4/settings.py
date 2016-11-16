@@ -136,10 +136,10 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 # Simplified static file serving.
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
-# STATIC_URL = '/static/'
-# MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, '../static'),
@@ -151,10 +151,11 @@ AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
-STATIC_URL = 'http://s3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME + '/'
 
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# STATIC_URL = 'http://s3.amazonaws.com/%s' % AWS_STORAGE_BUCKET_NAME + '/'
+#
+# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 AWS_QUERYSTRING_AUTH = False
 CKEDITOR_UPLOAD_PATH = "uploads/"
