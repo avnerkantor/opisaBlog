@@ -119,15 +119,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, '../static'),
-    # "/static",
-)
 
 # Parse database configuration from $DATABASE_URL
 
@@ -140,20 +132,26 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+# https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 ALLOWED_HOSTS = ['*']
 # Simplified static file serving.
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, '../static'),
+    # "/static",
+)
+# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 # DEFAULT_FILE_STORAGE = 'ckeditor.backends.s3boto.S3BotoStorage_AllPublic'
+
 AWS_STORAGE_BUCKET_NAME = 'opisa1'
 AWS_ACCESS_KEY_ID = 'AKIAJPC2Q4AQF7ADFFPQ'
 AWS_SECRET_ACCESS_KEY = '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'
-
-
-DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
-DISQUS_WEBSITE_SHORTNAME = "tikhinuch"
 
 SITE_ID = 1
 AWS_QUERYSTRING_AUTH = False
@@ -162,8 +160,8 @@ AWS_DEFAULT_ACL = 'public-read'
 CKEDITOR_IMAGE_BACKEND = "pillow"
 # CKEDITOR_UPLOAD_PREFIX = "http://opisa.org/media/"
 # CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % opisa1
+# STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_CONFIGS = {
@@ -230,6 +228,9 @@ CKEDITOR_CONFIGS = {
             ]),
     }
 }
+
+DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
+DISQUS_WEBSITE_SHORTNAME = "tikhinuch"
 
 try:
     from .local_settings import *
