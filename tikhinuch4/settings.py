@@ -136,10 +136,10 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 # Simplified static file serving.
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, '../static'),
