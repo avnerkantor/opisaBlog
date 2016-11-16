@@ -123,7 +123,7 @@ STATICFILES_DIRS = (
 SITE_ID = 1
 
 # https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
-
+AWS_STORAGE_BUCKET_NAME = 'opisa1'
 AWS_QUERYSTRING_AUTH = False
 CKEDITOR_UPLOAD_PATH = "uploads/"
 AWS_DEFAULT_ACL = 'public-read'
