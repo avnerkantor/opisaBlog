@@ -2,6 +2,7 @@ boto==2.43.0
 disqus==0.0.4
 dj-database-url==0.4.1
 Django==1.9.4
+django-boto==0.3.9
 django-ckeditor==5.0.2
 django-cors-headers==1.1.0
 django-disqus==0.5
@@ -10,6 +11,8 @@ django-uploader==0.2.1
 gunicorn==19.6.0
 mock==2.0.0
 pbr==1.10.0
+Pillow==3.4.2
 psycopg2==2.6.2
+python-dateutil==2.6.0
 six==1.10.0
 whitenoise==3.2.2
