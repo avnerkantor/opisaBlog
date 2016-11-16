@@ -235,4 +235,5 @@ DISQUS_WEBSITE_SHORTNAME = "tikhinuch"
 try:
     from .local_settings import *
 except Exception as e:
-pass
+    pass
+
