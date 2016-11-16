@@ -4,13 +4,7 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&s^4!!#bz5!=q*i9w3xa!123cn^8@!w^nifb9em228wvb&xwf4'
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.sites',
@@ -25,7 +19,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'storages',
-    # 'blog',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -43,13 +36,6 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'tikhinuch4.urls'
-
-# CORS_ORIGIN_ALLOW_ALL = True
-#
-# CORS_ORIGIN_WHITELIST = (
-#     'http://google.com',
-#     'http://dropbox.com'
-# )
 
 TEMPLATES = [
     {
@@ -79,9 +65,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tikhinuch4.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -108,18 +91,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
-
 LANGUAGE_CODE = 'he'
-
 TIME_ZONE = 'Asia/Tel_Aviv'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
-
 
 # Parse database configuration from $DATABASE_URL
 
@@ -132,7 +108,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-# https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
+
 ALLOWED_HOSTS = ['*']
 # Simplified static file serving.
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
@@ -143,25 +119,14 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, '../static'),
-    # "/static",
 )
-# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-# DEFAULT_FILE_STORAGE = 'ckeditor.backends.s3boto.S3BotoStorage_AllPublic'
 
-AWS_STORAGE_BUCKET_NAME = 'opisa1'
-AWS_ACCESS_KEY_ID = 'AKIAJPC2Q4AQF7ADFFPQ'
-AWS_SECRET_ACCESS_KEY = '56dYfMDkkoPBhG/Mdzn4fXuUPDTsjPYGVKPtBa1S'
-
+# https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 SITE_ID = 1
 AWS_QUERYSTRING_AUTH = False
 CKEDITOR_UPLOAD_PATH = "uploads/"
 AWS_DEFAULT_ACL = 'public-read'
 CKEDITOR_IMAGE_BACKEND = "pillow"
-# CKEDITOR_UPLOAD_PREFIX = "http://opisa.org/media/"
-# CKEDITOR_JQUERY_URL = 'http:///ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % opisa1
-# STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_CONFIGS = {
