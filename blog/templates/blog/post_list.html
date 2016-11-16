@@ -19,23 +19,24 @@
                 <div class="col-md-9">
                     <br><br><br>
 
-                <span class="previous">
+                    <span class="previous">
                     {% if posts.has_previous %}
                         <a href="?{{ page_request_var }}=
+
 
                                 {{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">עמוד קודם</a>
                     {% endif %}
                 </span>
-                        <span class="current">
+                    <span class="current">
                         עמוד {{ posts.number }} מתוך {{ posts.paginator.num_pages }}
                     </span>
-                        <span class="next">
+                    <span class="next">
                     {% if posts.has_next %}
                         <a href="?{{ page_request_var }}=
                                 {{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">לעמוד הבא</a>
                     {% endif %}
                 </span>
-                        <br><br>
+                    <br><br>
                 </div>
             </div>
             <div class="col-xs-3">
@@ -55,18 +56,18 @@
                         <ol>
                             {% for post in recentposts %}
                                 <li><a href="{% url 'blog:post_detail' slug=post.slug %}">
-                                        {{ post.title }}
-                                    </a>
+                                    {{ post.title }}
+                                </a>
                                 </li>
                             {% endfor %}
-                       </ol>
+                        </ol>
                     </div>
                 </div>
-                {#                            <div class="well">#}
-                {#                                <h4>כתיבה בבלוג</h4>#}
-                {##}
-                {#                                <p></p>#}
-                {#                            </div>#}
+{#                <div class="well">#}
+{#                    <button onclick="location.href='http://eepurl.com/coX6Er'" type="button">#}
+{#                        הרשמה לרשימת תפוצה#}
+{#                    </button>#}
+{#                </div>#}
             </div>
         </div>
     </div>
