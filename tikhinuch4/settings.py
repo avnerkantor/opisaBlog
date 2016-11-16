@@ -136,10 +136,10 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 # Simplified static file serving.
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
-# STATIC_URL = '/static/'
-# MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, '../static'),
@@ -155,15 +155,15 @@ AWS_STORAGE_BUCKET_NAME = 'opisa1'
 AWS_ACCESS_KEY_ID = 'AKIAJPC2Q4AQF7ADFFPQ'
 AWS_SECRET_ACCESS_KEY = '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'
 
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
-MEDIAFILES_LOCATION = 'media'
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+#
+# STATICFILES_LOCATION = 'static'
+# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+# STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+# MEDIAFILES_LOCATION = 'media'
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 SITE_ID = 1
 AWS_QUERYSTRING_AUTH = False
