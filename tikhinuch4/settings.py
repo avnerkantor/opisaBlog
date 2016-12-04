@@ -77,6 +77,9 @@ TEMPLATES = [
 #     'allauth.account.auth_backends.AuthenticationBackend',
 # )
 
+
+ADMINS = (('avner', 'avnerkantor@gmail.com'),)
+
 WSGI_APPLICATION = 'tikhinuch4.wsgi.application'
 
 # Database

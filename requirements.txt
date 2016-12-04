@@ -15,4 +15,3 @@ Pillow==3.4.2
 psycopg2==2.6.2
 python-dateutil==2.6.0
 six==1.10.0
-whitenoise==3.2.2
