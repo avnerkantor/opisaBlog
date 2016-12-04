@@ -78,7 +78,7 @@ TEMPLATES = [
 # )
 
 
-ADMINS = (('avner', 'avnerkantor@gmail.com'),)
+# ADMINS = (('avner', 'avnerkantor@gmail.com'),)
 
 WSGI_APPLICATION = 'tikhinuch4.wsgi.application'
 
