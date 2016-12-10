@@ -1,4 +1,4 @@
-boto==2.43.0
+boto==2.44.0
 disqus==0.0.4
 dj-database-url==0.4.1
 Django==1.10.4
