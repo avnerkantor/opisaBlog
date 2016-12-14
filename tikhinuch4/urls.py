@@ -18,7 +18,7 @@ urlpatterns = [
                   # url(r'^grunts', view_grunts, name='grunts'),
                   # url(r'^pisa', view_pisa, name='pisa'),
                   # url(r'^polls/', include('polls.urls')),
-                  url(r'^admin/', admin.site.urls),
+                  url(r'^admin1/', admin.site.urls),
                   url(r'^ckeditor/', include('ckeditor_uploader.urls')),
               ]
 if settings.DEBUG is True:
