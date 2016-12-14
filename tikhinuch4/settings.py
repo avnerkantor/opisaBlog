@@ -169,7 +169,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 # MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
-SITE_ID = 0
+SITE_ID = 1
 AWS_QUERYSTRING_AUTH = False
 CKEDITOR_UPLOAD_PATH = "uploads/"
 AWS_DEFAULT_ACL = 'public-read'
