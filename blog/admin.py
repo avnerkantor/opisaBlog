@@ -5,7 +5,7 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ("title", "created_date", "modified", "published_date", "status",)
     prepopulated_fields = {"slug": ("title",)}
     search_fields = ("title", "text",)
-    fields = ("author", "title", "image", "summary", "text", "slug", "published_date", "status",)
+    fields = ("author", "title", "summary", "text", "slug", "published_date", "status",)
     # list_filter = ('finish',)
     # ordering = ('-finish',)
 

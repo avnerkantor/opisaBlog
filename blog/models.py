@@ -57,7 +57,6 @@ class Post(models.Model):
     author = models.ForeignKey(Author, blank=True, null=True)
     title = models.CharField('כותרת', max_length=200, db_index=True, unique=True)
     slug = models.SlugField(max_length=200, unique=True, db_index=True, allow_unicode=True, null=True, blank=True)
-    image=models.FileField(null=True, blank=True)
     summary=models.CharField(max_length=400, null=True, blank=True)
     text = RichTextUploadingField()
     created_date = models.DateTimeField(
