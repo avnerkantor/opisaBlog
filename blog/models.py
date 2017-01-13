@@ -54,7 +54,7 @@ class Post(models.Model):
 
     # authors = models.ManyToManyField(Author)
     # author = models.ForeignKey('auth.User', blank=True, null=True, default=1)
-    author = models.ForeignKey(Author, blank=True, null=True)
+    author = models.ForeignKey(Author, blank=True, null=True, default='מערכת')
     title = models.CharField('כותרת', max_length=200, db_index=True, unique=True)
     slug = models.SlugField(max_length=200, unique=True, db_index=True, allow_unicode=True, null=True, blank=True)
     summary=models.CharField(max_length=400, null=True, blank=True)
