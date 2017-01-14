@@ -1,19 +1,10 @@
 {% extends 'tikhinuch4/base.html' %}
-{% block title %}פיזה פתוח|רשומה{% endblock %}
+{% block title %}אודות{% endblock %}
 
 {% block content %}
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-9">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.summary }}</p>
-                <p>
-                    מאת {{ post.author }} {% if post.published_date %}
-                    <span class="glyphicon glyphicon-time"></span>
-                    פורסם ב-{{ post.published_date|date:"j.m.Y" }}
-                {% endif %}
-                </p>
-                <hr>
                 <p>{{ post.text|safe }}</p>
                 {% load disqus_tags %}
                 {% disqus_show_comments %}

@@ -61,34 +61,7 @@ def post(request, slug):
     post = get_object_or_404(Post, slug=slug)
     return render(request, 'blog/post.html', {'post': post})
 
+def about(request):
+    post = Post.objects.get(title="אודות")
+    return render(request, 'blog/about.html', {'post': post})
 
-
-# def view_home_en(request):
-#     # posts = Post.objects.order_by('-published_date')[0:5]
-#     return render(request, '../templates/tikhinuch4/index-en.html', {})
-#
-#
-# def view_about(request):
-#     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-#     selectedPost = Post.objects.filter(title="אודות")
-#     return render(request, 'blog/about.html', {'recentposts': recentposts, 'selectedPost': selectedPost})
-#
-#
-# def view_about_en(request):
-#     return render(request, 'blog/about-en.html', {})
-#
-#
-# def view_grunts(request):
-#     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-#     return render(request, 'blog/grunts.html', {'recentposts': recentposts})
-#
-#
-# def view_pisa(request):
-#     recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
-#     selectedPost = Post.objects.filter(title='מבחן פיז"ה')
-#     return render(request, 'blog/pisa.html', {'recentposts': recentposts, 'selectedPost': selectedPost})
-#
-#
-# def view_home_new(request):
-#     return render(request, '../templates/tikhinuch4/index2.html', {})
-#

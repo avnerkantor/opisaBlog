@@ -12,7 +12,7 @@
                     <p>
                         מאת {{ post.author }}
                         <span class="glyphicon glyphicon-time"></span>
-                        פורסם ב-{{ post.published_date }}
+                        פורסם ב-{{ post.published_date|date:"j.m.Y"}}
                     </p>
                     <hr>
                 {% endfor %}
