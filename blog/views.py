@@ -62,6 +62,7 @@ def post(request, slug):
     return render(request, 'blog/post.html', {'post': post})
 
 def about(request):
-    post = Post.objects.get(title="אודות")
-    return render(request, 'blog/about.html', {'post': post})
+    recentposts = Post.objects.filter(published_date__lte=timezone.now(), status='p').order_by('-published_date')[0:5]
+    aboutPost = Post.objects.get(title="אודות")
+    return render(request, 'blog/about.html', {'post': aboutPost, 'recentposts':recentposts})
 
