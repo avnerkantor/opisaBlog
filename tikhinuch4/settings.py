@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&s^4!!#bz5!=q*i9w3xa!123cn^8@!w^nifb9em228wvb&xwf4'
+SECRET_KEY = ''
 
 # Application definition
 
@@ -45,11 +45,6 @@ MIDDLEWARE_CLASSES = [
 ROOT_URLCONF = 'tikhinuch4.urls'
 
 # CORS_ORIGIN_ALLOW_ALL = True
-#
-# CORS_ORIGIN_WHITELIST = (
-#     'http://google.com',
-#     'http://dropbox.com'
-# )
 
 TEMPLATES = [
     {
@@ -154,9 +149,9 @@ STATICFILES_DIRS = (
 # AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 # AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 # AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-AWS_STORAGE_BUCKET_NAME = 'opisa1'
-AWS_ACCESS_KEY_ID = 'AKIAIO4XU7HQPGIFNTYA'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = ''
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = '+Sc/7OdwXLw1wD6t7'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 # AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
@@ -241,7 +236,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-DISQUS_API_KEY = 'o9TRCmIcdfalpU8XNOCaMGd5joWP4sIgO9qWYBqOTGCAp37mr1B5ssn59sYXx7bR'
+DISQUS_API_KEY = ''
 DISQUS_WEBSITE_SHORTNAME = "tikhinuch"
 
 try:
